@@ -1,0 +1,116 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Selectors</title>
+    <style>
+        body{
+            background: beige;
+            color:white;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size:14px;
+        }
+        #container {
+            width:40%;
+            margin: auto;
+        }
+        ul {
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+        ul li:first-child {
+            background:#009f00;
+        }
+        ul li:last-child{
+            background:#006332;
+        }
+        ul li {
+            border:1px solid #019c7c;
+            background: #007f9f;
+            color:white;
+            margin-top:3px;
+            padding:5px;
+            text-align:center;
+        }
+        ul li:nth-child(2n) {
+            background:#019c7c;
+        }
+        ul li p {
+            display:none;
+            position:absolute;
+            background: #007f9f;
+            border:1px solid #019c7c;
+            padding:5px;
+        }
+        ul li:hover p {
+            display:inherit;
+        }
+        section {
+            position: absolute;
+            width:400px;
+            height:300px;
+            background: #007f9f;
+        }
+        #container>sections:not(:target, #listItems){
+            z-index:-1;
+        }
+        :target{
+            z-index:2;
+        }
+        #other{
+            text-align:center;
+        }
+        #listItems {
+            z-index:1;
+        }
+        a {
+            font-size:14px;
+            text-decoration:none;
+            color:#007f9f;
+        }
+        a:hover {
+            color:#009f00;
+        }
+        ::selection{
+            background:beige;
+            color:#009f00;
+        }
+    </style>
+<body>
+    <div id="container">
+        <nav>
+            <a href="#listItems">Tab 1</a>
+            <a href="#other">Tab 2</a>
+        </nav>
+        <section id="listItems">
+            <ul>
+                <li>List Item 1
+                    <p>Tool Tip 1</p>
+                </li>
+                <li>List Item 2
+                    <p>Tool Tip 2</p>
+                </li>
+                <li>List Item 3
+                    <p>Tool Tip 3</p>
+                </li>
+                <li>List Item 4
+                    <p>Tool Tip 4</p>
+                </li>
+                <li>List Item 5
+                    <p>Tool Tip 5</p>
+                </li>
+                <li>List Item 6
+                    <p>Tool Tip 6</p>
+                </li>
+                <li>List Item 7
+                    <p>Tool Tip 7</p>
+                </li>
+            </ul>
+        </section>
+        <section id="other">
+            <p>Something else...</p>
+        </section>
+    </div>
+</body>
+</html>

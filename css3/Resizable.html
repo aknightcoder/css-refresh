@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Resizable Demo</title>
+    <style>
+        body{
+            background-color:beige;
+            color:black;
+        }
+        .resizable{
+            background-color: #007f9f;;
+            color:white;
+            cursor:move;
+            height:150px;
+            margin:2px;
+            max-width: 500px;
+            min-width: 100px;
+            max-height:300px;
+            min-height:100px;
+            padding:5px;
+            overflow:auto;
+            resize: both;
+            width:250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="resizable">
+        <p>Can i resize this?</p>
+    </div>
+    <div class="resizable">
+            <p>Can i resize this as well?</p>
+    </div>
+</body>
+</html>

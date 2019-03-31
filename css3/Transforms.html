@@ -1,0 +1,49 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Transforms</title>
+    <style>
+        div{
+            background-color:#007f9f; 
+            color:white; 
+            height:200px; 
+            margin:5px;
+            padding:15px; 
+            text-align:center; 
+            width:100px;
+        }
+        .rotate {
+            transform: rotate(180deg);
+        }
+        .skew{
+            transform: skew(30deg,30deg);
+        }
+        .skewX{
+            transform: skewX(30deg);
+        }
+        .skewY{
+            transform: skewY(30deg);
+        }
+        .scaleHalf{
+            transform:scale(0.5);
+        }
+        .scaleTwice {
+            transform:scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="rotate">Rotate!</p>
+        <p class="skew">Skew</p>
+        <p class="skewX">Skew X</p>
+        <p class="skewY">Skew Y</p>
+    </div>
+    <div>
+        <p>Scale</p>
+        <p class="scaleHalf">Scale</p>
+        <p class="scaleTwice">Scale</p>
+    </div>
+</body>
+</html>

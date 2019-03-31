@@ -1,0 +1,129 @@
+ <!DOCTYPE <!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset="utf-8" />
+     <title>Animations</title>
+     <style>
+        body{
+            background:beige;
+        }
+
+         @keyframes blushing {
+            from { background: #dddddd;}
+             to { background:#ff9999}
+         }
+
+         @-webkit-keyframes blushing {
+             from { background: #dddddd;}
+             to { background:#ff9999}
+         }
+
+         @keyframes colorMe {
+             0% { background: #006332;}
+             25% { background: #009f00;}
+             50% { background:  #007f9f}
+             100% { background: #019c7c;}
+         }
+
+         @-webkit-keyframes colorMe {
+             0% { background: #006332;}
+             25% { background: #009f00;}
+             50% { background:  #007f9f}
+             100% { background: #019c7c;}
+         }
+
+        @keyframes alterMe {
+             0% { background: #006332;}
+             25% { background: #009f00; box-shadow: 0 0 4px 2px #006332}
+             50% { background:  #007f9f; box-shadow: 0 0 8px 4px orange}  
+             100% { background: #019c7c; box-shadow: 0 0 16px 6x #009f00}
+         }
+
+         @-webkit-keyframes alterMe {
+             0% { background: #006332;}
+             25% { background: #009f00; box-shadow: 0 0 4px 2px #006332}
+             50% { background:  #007f9f; box-shadow: 0 0 8px 4px orange}  
+             100% { background: #019c7c; box-shadow: 0 0 16px 6x #009f00}
+         }
+
+          @keyframes shockMe {
+             0% { background: #006332;}
+             25% { 
+                    background: #009f00; 
+                    box-shadow: 0 0 4px 2px #006332;
+                    -webkit-transform: scale(1.1) rotate(4deg) translate(1em);
+                    transform: scale(1.1) rotate(4deg) translate(1em)
+                }
+             50% { 
+                    background:  #007f9f; 
+                    box-shadow: 0 0 8px 4px orange;
+                    -webkit-transform: scale(1.5) rotate(15deg) translate(.5em,-5em);
+                    transform: scale(1.5) rotate(15deg) translate(.5em,-5em);
+                }  
+             100% { 
+                    background: #019c7c; 
+                    box-shadow: 0 0 16px 6x #009f00;
+                    -webkit-transform: scale(.05) rotate(0deg) translate(0em,-30em);
+                    transform: scale(.05) rotate(0deg) translate(0em,-30em);
+                }
+         }
+
+         @-webkit-keyframes shockMe {
+            0% { background: #006332;}
+             25% { 
+                    background: #009f00; 
+                    box-shadow: 0 0 4px 2px #006332;
+                    -webkit-transform: scale(1.1) rotate(4deg) translate(1em);
+                    transform: scale(1.1) rotate(4deg) translate(1em)
+                }
+             50% { 
+                    background:  #007f9f; 
+                    box-shadow: 0 0 8px 4px orange;
+                    -webkit-transform: scale(1.5) rotate(15deg) translate(.5em,-5em);
+                    transform: scale(1.5) rotate(15deg) translate(.5em,-5em);
+                }  
+             100% { 
+                    background: #019c7c; 
+                    box-shadow: 0 0 16px 6x #009f00;
+                    -webkit-transform: scale(.05) rotate(0deg) translate(0em,-30em);
+                    transform: scale(.05) rotate(0deg) translate(0em,-30em);
+                }
+         }
+
+         #boxContainer {
+             margin:auto;
+             width:110px;
+             border:1px solid #019c7c;
+         }
+         .box {
+             height:100px;
+             margin:5px;
+             width:100px;
+         }
+         #box1 {
+             animation: blushing 5s; 
+             -webkit-animation: blushing 5s;
+         }
+         #box2 {
+             animation: colorMe 6s;
+             -webkit-animation: colorMe 6s;
+         }
+         #box3 {
+             animation: alterMe 10s;
+             -webkit-animation: alterMe 10s;
+         }
+         #box4 { 
+            animation: shockMe 15s initial alternate;
+             -webkit-animation: shockMe 15s infinite alternate;
+         }
+     </style>
+ </head>
+ <body>
+     <div id="boxContainer">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+     </div>
+ </body>
+ </html>

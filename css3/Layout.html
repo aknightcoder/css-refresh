@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Layouts</title>
+    <style>
+        body {
+            background:beige;
+        }
+        h1{
+            color:#019c7c;
+        }
+        #container {
+            width:80%;
+            margin:auto;
+            text-align:center;
+        }
+        #outerDiv {
+            display:table;
+            width:50%;
+            margin:auto;
+        }
+       .box {
+            background: cornflowerblue;
+            color:white;
+            margin:1px;
+            padding:5px;
+            text-align:center;
+        }
+        .tableCell {
+            display: table-cell;
+            border:1px solid white;
+        }
+        .tableRow {
+            display: table-row;
+        }
+        #outerBox {
+            display: box;
+            display: -webkit-box;
+            text-align:center;
+        }
+        #box1 { 
+            box-ordinal-group: 1;
+            -webkit-box-ordinal-group: 1;
+        }
+        #box2 { 
+            box-ordinal-group: 2;
+            -webkit-box-ordinal-group: 2;
+            -webkit-box-flex:1;
+            box-flex: 1;
+        }
+        #box3 { 
+            box-ordinal-group: 3;
+            -webkit-box-ordinal-group: 3;
+        }
+        #columns {
+            -webkit-column-count: 3;
+            column-count: 3;
+            column-gap: 0;
+            -webkit-column-gap: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Table Layout</h1>
+        <div id="outerDiv">
+            <div class="tableRow">
+                <div class="tableCell box">Cell 1</div>
+                <div class="tableCell box">Cell 2</div>
+            </div>
+            <div class="tableRow">
+                    <div class="tableCell box">Cell 3</div>
+                    <div class="tableCell box">Cell 4</div>
+            </div>
+        </div>
+        <h1>Box Layout</h1>
+        <div id="outerBox">
+            <div id="box3" class="box">Box 3</div>
+            <div id="box1" class="box">Box 1</div>
+            <div id="box2" class="box">Box 2</div>
+        </div>
+        <h1>Columns</h1>
+        <div id="columns">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </div>
+</body>
+</html>
